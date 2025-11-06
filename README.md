@@ -2,6 +2,15 @@
 
 A clean, beginner‑friendly MERN (MongoDB, Express, React, Node.js) app. Functional React with hooks and Bootstrap styling. JWT auth, simple Express routes, and basic Mongoose models.
 
+## 📸 Preview
+
+[![SlotSwapper Preview](frontend/ss1.png)](https://github.com/Rahul-49/SlotSwapper)
+[![SlotSwapper Preview](frontend/ss2.png)](https://github.com/Rahul-49/SlotSwapper)
+[![SlotSwapper Preview](frontend/ss3.png)](https://github.com/Rahul-49/SlotSwapper)
+[![SlotSwapper Preview](frontend/ss4.png)](https://github.com/Rahul-49/SlotSwapper)
+[![SlotSwapper Preview](frontend/ss5.png)](https://github.com/Rahul-49/SlotSwapper)
+
+
 ## Quick Start
 
 Prerequisites:
@@ -15,27 +24,15 @@ Install and run (from project root):
 
 ## Run Servers Step by Step
 
-You can run the backend and frontend separately or together.
-
-### 1) Backend (API)
+### Backend (API)
 
 From the project root (`e:\SDE`):
 
 ```powershell
-# install root tools (if not already)
+cd backend
 npm install
-
-# install backend deps
-npm --prefix backend install
-
-# start backend (recommended)
-npm --prefix backend run dev
-
-# alternative: from backend/src folder directly
-# cd backend/src
-# nodemon server
-# or
-# node server.js
+cd src
+nodemon server
 ```
 
 Environment file (already created): `backend/.env`
@@ -48,32 +45,17 @@ JWT_SECRET=change_me
 
 Make sure your local MongoDB service is running.
 
-### 2) Frontend (React)
+### Frontend (React)
 
 From the project root (`e:\SDE`):
 
 ```powershell
-# go to frontend folder
 cd frontend
-
-# install frontend deps
 npm install
-
-# start frontend (Vite)
 npm run dev
 ```
 
 The app will be available at `http://localhost:5173`.
-
-### 3) Run Both Together (one command)
-
-From the project root:
-
-```powershell
-npm run dev
-```
-
-This uses `concurrently` to start both backend (port 5000) and frontend (port 5173).
 
 ## Backend
 Location: `backend/`
@@ -89,7 +71,7 @@ Scripts:
 - `npm --prefix backend run dev` – start API with nodemon
 
 Tech:
-- Express 5, Mongoose 8, JWT, bcrypt, CORS, dotenv, morgan
+- Express 5, Mongoose 8, JWT, bcrypt, CORS, dotenv
 
 Models:
 - User: `{ name, email, password }`
