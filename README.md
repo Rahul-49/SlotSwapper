@@ -10,6 +10,25 @@ A clean, beginner‑friendly MERN (MongoDB, Express, React, Node.js) app. Functi
 [![SlotSwapper Preview](frontend/ss4.png)](https://github.com/Rahul-49/SlotSwapper)
 [![SlotSwapper Preview](frontend/ss5.png)](https://github.com/Rahul-49/SlotSwapper)
 
+---
+
+## Auth & State Flow
+1. Signup/Login → backend returns `{ token, user }`.
+2. Frontend stores `token` in `localStorage` and sets auth context.
+3. Axios adds `Authorization: Bearer <token>` automatically.
+4. Protected routes require `token`. Non‑auth users are redirected to `/login`.
+
+---
+
+## Swap Flow Example
+1. User A creates an event and marks it `SWAPPABLE`.
+2. User B views `Marketplace`, selects one of their events and clicks “Request Swap” on A’s event.
+3. A sees an Incoming request in `Requests`.
+4. A clicks Accept → backend swaps `userId` on both events and marks both `BUSY`, marks the request `ACCEPTED`, and rejects other pending swaps involving those events.
+5. UI refreshes to reflect updated ownership and statuses.
+
+---
+
 
 ## Quick Start
 
